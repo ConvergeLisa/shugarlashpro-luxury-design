@@ -156,23 +156,38 @@ function Index() {
           </p>
         </div>
 
-        <div className="grid gap-px overflow-hidden rounded-2xl border border-[var(--gold)]/20 bg-[var(--gold)]/15 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => (
-            <div key={s.name} className="group relative bg-onyx p-8 transition duration-500 hover:bg-[oklch(0.11_0.01_70)]">
-              <div className="mb-8 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                0{i + 1} / Service
-              </div>
-              <h3 className="font-display text-3xl leading-tight text-foreground">{s.name}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-              <div className="mt-10 flex items-end justify-between border-t border-[var(--gold)]/15 pt-6">
-                <span className="font-display text-2xl gold-foil">{s.price}</span>
-                <a href={BOOK_URL} target="_blank" rel="noreferrer"
-                   className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground transition group-hover:text-gold">
-                  Book →
-                </a>
-              </div>
-            </div>
-          ))}
+        <div className="relative mx-auto max-w-3xl">
+          <div className="pointer-events-none absolute -inset-x-10 -inset-y-6 -z-10 rounded-3xl opacity-40 blur-3xl"
+               style={{ background: "radial-gradient(ellipse at center, oklch(0.82 0.13 85 / 0.25), transparent 70%)" }} />
+          <ul className="divide-y divide-[var(--gold)]/15 border-y border-[var(--gold)]/20">
+            {services.map((s, i) => (
+              <li key={s.name} className="group flex items-baseline gap-6 py-7 transition">
+                <span className="w-10 shrink-0 font-display text-xs tracking-[0.3em] text-gold">
+                  0{i + 1}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-display text-2xl leading-tight text-foreground transition group-hover:gold-foil md:text-3xl">
+                    {s.name}
+                  </h3>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                </div>
+                <span className="hidden text-gold opacity-0 transition group-hover:opacity-100 md:inline">✦</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-14 flex flex-col items-center gap-4">
+            <Link to="/pricing"
+                  className="group inline-flex items-center justify-center rounded-full px-10 py-5 text-xs uppercase tracking-[0.35em] text-primary-foreground"
+                  style={{ background: "var(--gradient-gold)", boxShadow: "var(--shadow-gold)" }}>
+              View Full Pricelist
+              <span className="ml-3 transition-transform group-hover:translate-x-1">→</span>
+            </Link>
+            <a href={BOOK_URL} target="_blank" rel="noreferrer"
+               className="text-[11px] uppercase tracking-[0.3em] text-muted-foreground transition hover:text-gold">
+              or book online →
+            </a>
+          </div>
         </div>
       </section>
 
