@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import logo from "@/assets/logo-gold.png";
-import founder from "@/assets/founder.jpg";
+import founder from "@/assets/founder-bongi.jpg";
 
 import { CircularCarousel } from "@/components/CircularCarousel";
 
