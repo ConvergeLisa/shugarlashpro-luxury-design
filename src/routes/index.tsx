@@ -36,7 +36,7 @@ function Index() {
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
           <a href="#top" className="flex items-center gap-2">
-            <span className="font-display text-xl tracking-[0.4em] gold-foil">SLP</span>
+            <img src={logo} alt="Shugarlashpro" className="h-12 w-auto md:h-14" />
           </a>
           <div className="hidden items-center gap-10 text-xs uppercase tracking-[0.3em] text-muted-foreground md:flex">
             <a href="#services" className="transition hover:text-gold">Services</a>

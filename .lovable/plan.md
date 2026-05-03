@@ -1,22 +1,37 @@
-## Goal
-Swap in the new animated logo and make it feel painted onto the page — black background of the video disappearing into the site's onyx, with only the gold logo glowing.
+## Issue
+1. The animated logo video isn't visible — it's there, but `mix-blend-mode: screen` combined with the gold radial glow behind it is washing it out / making it invisible against the dark page on some renders. The mp4's background is already near-black, so blend mode is unnecessary.
+2. The top-left "SLP" text should be replaced with the actual gold lash logo image.
 
-## Steps
+## Fix in `src/routes/index.tsx`
 
-1. **Replace the video file**
-   - Copy `user-uploads://GBLogo-2.mp4` → `public/logo-animated.mp4` (overwrite the empty placeholder).
+**a) Top-left logo (nav)**
+Replace the SLP text span with an `<img>` using the existing `logo` import:
+```tsx
+<a href="#top" className="flex items-center gap-2">
+  <img src={logo} alt="Shugarlashpro" className="h-12 w-auto md:h-14" />
+</a>
+```
 
-2. **Blend the video into the background** in `src/routes/index.tsx` (hero left column)
-   - Keep `autoPlay loop muted playsInline` (already loops).
-   - Add `mix-blend-mode: screen` to the `<video>` so the dark background of the mp4 drops out and only the bright gold pixels remain — this is the cleanest way to make video + page background read as one continuous surface.
-   - Add a subtle gold radial glow behind it (already partially there) and bump its opacity so the logo "pops."
-   - Remove the hard rectangular edge by dropping the poster fallback's visible frame and letting the blended video sit directly on the page.
-   - Slightly enlarge max width and add a soft `drop-shadow` in gold for extra lift.
+**b) Hero animated video**
+- Remove `mixBlendMode: "screen"` (the mp4's black already matches the onyx page).
+- Keep the soft gold glow but reduce its blur opacity so it doesn't wash the logo out.
+- Ensure attributes for reliable autoplay everywhere: add `preload="auto"` and keep `autoPlay loop muted playsInline`.
+- Keep the gold drop-shadow filter for the "pop" effect.
 
-3. **QA**
-   - Visually verify in preview: black bars from the mp4 should be invisible; only the animated gold logo visible against the onyx background; loop is seamless.
+Resulting video block:
+```tsx
+<video
+  src="/logo-animated.mp4"
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="auto"
+  className="h-auto w-full"
+  style={{ filter: "drop-shadow(0 10px 40px oklch(0.82 0.13 85 / 0.35))" }}
+/>
+```
 
-## Technical notes
-- `mix-blend-mode: screen` on a video with a pure-black background renders black as transparent against any darker-or-equal background — perfect for our `oklch(0.06 0 0)` body.
-- No new dependencies, no route changes, no styles.css changes required (inline style is enough for the one element).
-- File swap uses `code--copy` with `overwrite: true` since `public/logo-animated.mp4` already exists (size 0).
+## QA
+- Reload preview, confirm gold logo plays in the hero left column on a black background (seamless blend).
+- Confirm top-left nav now shows the gold lash logo instead of "SLP" text.
