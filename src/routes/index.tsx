@@ -21,12 +21,12 @@ const WHATSAPP = "https://wa.me/27670615423?text=Hi%20Shugarlashpro%2C%20I%27d%2
 const PHONE = "+27670615423";
 
 const services = [
-  { name: "Classic Lashes", price: "R600", desc: "One-on-one application for a refined, natural finish." },
-  { name: "YY Lashes", price: "R550", desc: "Pre-fanned styles for soft density and effortless wear." },
-  { name: "Volume Lashes", price: "R800", desc: "Hand-made fans for a fuller, more elevated look." },
-  { name: "Russian Volume", price: "R1000", desc: "Ultra-fine lashes layered for couture-level depth." },
-  { name: "Mega Volume", price: "R1500", desc: "Maximum drama. Sculpted, weightless, unforgettable." },
-  { name: "Brow Extensions", price: "R950", desc: "Hair-by-hair architecture for the perfect arch." },
+  { name: "Classic Lashes", desc: "One-on-one application for a refined, natural finish." },
+  { name: "YY Lashes", desc: "Pre-fanned styles for soft density and effortless wear." },
+  { name: "Volume Lashes", desc: "Hand-made fans for a fuller, more elevated look." },
+  { name: "Russian Volume", desc: "Ultra-fine lashes layered for couture-level depth." },
+  { name: "Mega Volume", desc: "Maximum drama. Sculpted, weightless, unforgettable." },
+  { name: "Brow Extensions", desc: "Hair-by-hair architecture for the perfect arch." },
 ];
 
 function Index() {
