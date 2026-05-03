@@ -71,11 +71,9 @@ function Index() {
                 loop
                 muted
                 playsInline
+                preload="auto"
                 className="h-auto w-full"
-                style={{
-                  mixBlendMode: "screen",
-                  filter: "drop-shadow(0 10px 40px oklch(0.82 0.13 85 / 0.35))",
-                }}
+                style={{ filter: "drop-shadow(0 10px 40px oklch(0.82 0.13 85 / 0.35))" }}
               />
             </div>
           </div>
