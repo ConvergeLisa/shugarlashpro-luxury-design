@@ -199,8 +199,8 @@ function Index() {
               <img src={founder} alt="The founder of ShugarLashPro" loading="lazy" width={800} height={1000} className="h-[600px] w-full object-cover" />
               <div className="absolute inset-x-0 bottom-0 p-6"
                    style={{ background: "linear-gradient(180deg, transparent, oklch(0.06 0 0 / 0.85))" }}>
-                <div className="text-[10px] uppercase tracking-[0.4em] text-gold">Founder</div>
-                <div className="font-display text-2xl text-foreground">The Famous Lash Professional</div>
+                <div className="text-[10px] uppercase tracking-[0.4em] text-gold">CEO & Founder</div>
+                <div className="font-display text-2xl text-foreground">Bongi — The Famous Lash Professional</div>
               </div>
             </div>
           </div>
