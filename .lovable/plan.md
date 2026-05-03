@@ -1,41 +1,22 @@
 ## Goal
-Remove the priced services grid from the home page and replace it with a lavish "service menu" teaser. Move the full pricelist onto a new dedicated `/pricing` page (modeled after the original site's "Living the Lash Life" → Treatments & Pricelist), with a gold CTA button on the home page that links to it.
+Swap in the new animated logo and make it feel painted onto the page — black background of the video disappearing into the site's onyx, with only the gold logo glowing.
 
 ## Steps
 
-### 1. New route `src/routes/pricing.tsx` — full pricelist
-- Same black+gold shell (nav, footer, mobile sticky CTA) as the other pages.
-- `head()` meta: title "Treatments & Pricelist — SHUGARLASHPRO", description, og tags.
-- Hero band:
-  - Eyebrow tag "Treatments & Pricelist".
-  - Headline **"Living the lash life."** (display font, gold-foil accent).
-  - Intro paragraph adapted from the source: *"Whether you're after a subtle lift or bold, dramatic lashes, our beauty brigade is here to deliver customized results… designed and tailored just for you."*
-- Editorial price list grouped by category with thin gold dividers:
-  - **New Lash Sets** — Classic R600, YY R550, Hybrid R700, Volume R800, Russian Volume R1000, Mega Volume R1500
-  - **Refills** — Classic R350, YY R350, Hybrid R450, Volume R500, Russian R650, Mega R850
-  - **Brows** — Brow Extensions R950, Refill R550, Lamination & Tint R450
-  - **Add-Ons & Removals** — In-house removal R200, Foreign set removal R300, Lash bath R150
-- Each row: name + (optional one-line description) on the left, gold price right-aligned. No card grid — long-form luxury menu styling like a fine-dining list.
-- Note line: "Prices are guidelines. Final pricing confirmed at consultation."
-- CTA section: Book Online + WhatsApp.
+1. **Replace the video file**
+   - Copy `user-uploads://GBLogo-2.mp4` → `public/logo-animated.mp4` (overwrite the empty placeholder).
 
-### 2. Home page (`src/routes/index.tsx`) — replace priced grid
-- Remove the existing `services` array prices and the per-card price/Book row.
-- Replace the SERVICES section with a **lavish service menu teaser**:
-  - Keep eyebrow "The Menu" + headline.
-  - Render the 6 hero services as elegant editorial rows (name + short descriptor) with subtle gold dividers between them — no prices shown.
-  - Below the list, a centered prominent gold pill button: **"View Full Pricelist →"** linking via `<Link to="/pricing">`.
-  - Secondary text link: "Or book online →" pointing at Fresha.
-- Add `Pricelist` link to desktop nav (`<Link to="/pricing">`).
+2. **Blend the video into the background** in `src/routes/index.tsx` (hero left column)
+   - Keep `autoPlay loop muted playsInline` (already loops).
+   - Add `mix-blend-mode: screen` to the `<video>` so the dark background of the mp4 drops out and only the bright gold pixels remain — this is the cleanest way to make video + page background read as one continuous surface.
+   - Add a subtle gold radial glow behind it (already partially there) and bump its opacity so the logo "pops."
+   - Remove the hard rectangular edge by dropping the poster fallback's visible frame and letting the blended video sit directly on the page.
+   - Slightly enlarge max width and add a soft `drop-shadow` in gold for extra lift.
 
-### 3. Team page nav
-- Add `Pricelist` link to the nav on `src/routes/team.tsx` for consistency.
+3. **QA**
+   - Visually verify in preview: black bars from the mp4 should be invisible; only the animated gold logo visible against the onyx background; loop is seamless.
 
 ## Technical notes
-- New file: `src/routes/pricing.tsx` (TanStack auto-registers via routeTree.gen.ts).
-- Edit: `src/routes/index.tsx` — remove `price` field usage in services rendering, restructure SERVICES section, add nav link.
-- Edit: `src/routes/team.tsx` — add Pricelist nav link.
-- Reuses existing tokens (`gold-foil`, `var(--gradient-gold)`, `bg-onyx`, `var(--gold)`) — no CSS changes.
-
-## Out of scope
-- A real CMS-backed pricelist. Prices are hard-coded sensible defaults extrapolated from the existing service set; the user can hand me an exact list any time and I'll swap values 1:1.
+- `mix-blend-mode: screen` on a video with a pure-black background renders black as transparent against any darker-or-equal background — perfect for our `oklch(0.06 0 0)` body.
+- No new dependencies, no route changes, no styles.css changes required (inline style is enough for the one element).
+- File swap uses `code--copy` with `overwrite: true` since `public/logo-animated.mp4` already exists (size 0).

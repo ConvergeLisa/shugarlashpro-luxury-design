@@ -62,17 +62,20 @@ function Index() {
         <div className="mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-16 px-6 pt-32 pb-20 lg:grid-cols-2 lg:pt-24">
           {/* Left: Animated logo video (full, uncropped) */}
           <div className="relative order-2 flex items-center justify-center lg:order-1 animate-fade-up">
-            <div className="relative w-full max-w-[560px]">
-              <div className="absolute inset-0 -z-10 blur-3xl"
-                   style={{ background: "radial-gradient(circle, oklch(0.82 0.13 85 / 0.35), transparent 70%)" }} />
+            <div className="relative w-full max-w-[640px]">
+              <div className="pointer-events-none absolute inset-0 -z-10 blur-3xl animate-glow-pulse"
+                   style={{ background: "radial-gradient(circle, oklch(0.82 0.13 85 / 0.45), transparent 70%)" }} />
               <video
                 src="/logo-animated.mp4"
                 autoPlay
                 loop
                 muted
                 playsInline
-                poster={logo}
                 className="h-auto w-full"
+                style={{
+                  mixBlendMode: "screen",
+                  filter: "drop-shadow(0 10px 40px oklch(0.82 0.13 85 / 0.35))",
+                }}
               />
             </div>
           </div>
