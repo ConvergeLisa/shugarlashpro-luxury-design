@@ -40,9 +40,9 @@ function Index() {
           </a>
           <div className="hidden items-center gap-10 text-xs uppercase tracking-[0.3em] text-muted-foreground md:flex">
             <a href="#services" className="transition hover:text-gold">Services</a>
+            <Link to="/pricing" className="transition hover:text-gold">Pricelist</Link>
             <a href="#gallery" className="transition hover:text-gold">Gallery</a>
             <Link to="/team" className="transition hover:text-gold">Team</Link>
-            <a href="#founder" className="transition hover:text-gold">Founder</a>
             <a href="#book" className="transition hover:text-gold">Book</a>
           </div>
           <a href={BOOK_URL} target="_blank" rel="noreferrer"
