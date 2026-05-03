@@ -59,40 +59,20 @@ function Index() {
         </div>
 
         <div className="mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-16 px-6 pt-32 pb-20 lg:grid-cols-2 lg:pt-24">
-          {/* Left: Animated logo with gold ring */}
+          {/* Left: Animated logo video (full, uncropped) */}
           <div className="relative order-2 flex items-center justify-center lg:order-1 animate-fade-up">
-            <div className="relative aspect-square w-full max-w-[560px]">
-              {/* Outer rotating dashed ring */}
-              <svg className="absolute inset-0 animate-spin-slow" viewBox="0 0 400 400">
-                <defs>
-                  <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="oklch(0.62 0.13 70)" />
-                    <stop offset="50%" stopColor="oklch(0.92 0.1 88)" />
-                    <stop offset="100%" stopColor="oklch(0.62 0.13 70)" />
-                  </linearGradient>
-                </defs>
-                <circle cx="200" cy="200" r="196" fill="none" stroke="url(#goldGrad)" strokeWidth="0.6" strokeDasharray="2 6" />
-              </svg>
-              {/* Inner counter ring */}
-              <svg className="absolute inset-6 animate-orbit-reverse" viewBox="0 0 400 400">
-                <circle cx="200" cy="200" r="196" fill="none" stroke="url(#goldGrad)" strokeWidth="0.4" strokeDasharray="1 4" opacity="0.6" />
-              </svg>
-              {/* Soft pulsing gold glow */}
-              <div className="absolute inset-10 rounded-full animate-glow-pulse"
-                   style={{ background: "radial-gradient(circle, oklch(0.82 0.13 85 / 0.45), transparent 70%)" }} />
-              {/* Animated logo video */}
-              <div className="absolute inset-12 overflow-hidden rounded-full"
-                   style={{ boxShadow: "inset 0 0 0 1px oklch(0.82 0.13 85 / 0.35), 0 30px 80px -20px oklch(0.82 0.13 85 / 0.45)" }}>
-                <video
-                  src="/logo-animated.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  poster={logo}
-                  className="h-full w-full object-cover"
-                />
-              </div>
+            <div className="relative w-full max-w-[560px]">
+              <div className="absolute inset-0 -z-10 blur-3xl"
+                   style={{ background: "radial-gradient(circle, oklch(0.82 0.13 85 / 0.35), transparent 70%)" }} />
+              <video
+                src="/logo-animated.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                poster={logo}
+                className="h-auto w-full"
+              />
             </div>
           </div>
 
