@@ -215,6 +215,10 @@ function Index() {
               Shugarlashpro began in a quiet corner of Sandton with a single belief — that lashes should feel like couture: measured, considered, and made for one woman at a time. Today the studio is the trusted name behind Joburg's most photographed eyes, and the academy that trains the next generation of lash artists.
             </p>
 
+            <Link to="/team" className="mt-6 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.35em] text-gold hover:opacity-80">
+              Meet the team <span aria-hidden>→</span>
+            </Link>
+
             <div className="mt-12 grid grid-cols-3 gap-6 border-t border-[var(--gold)]/15 pt-8">
               {[
                 ["12y", "Founder craft"],
