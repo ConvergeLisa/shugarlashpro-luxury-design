@@ -30,6 +30,7 @@ function TeamPage() {
             <Link to="/" hash="services" className="transition hover:text-gold">Services</Link>
             <Link to="/" hash="gallery" className="transition hover:text-gold">Gallery</Link>
             <Link to="/team" className="text-gold transition">Team</Link>
+            <Link to="/pricing" className="transition hover:text-gold">Pricelist</Link>
             <Link to="/" hash="book" className="transition hover:text-gold">Book</Link>
           </div>
           <a href={BOOK_URL} target="_blank" rel="noreferrer"
