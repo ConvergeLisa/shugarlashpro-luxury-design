@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import logo from "@/assets/logo-gold.png";
 import founder from "@/assets/founder.jpg";
-import lashHero from "@/assets/lash-1.jpg";
+
 import { CircularCarousel } from "@/components/CircularCarousel";
 
 export const Route = createFileRoute("/")({
