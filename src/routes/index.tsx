@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import logo from "@/assets/logo-gold.png";
-import founder from "@/assets/founder.jpg";
+import founder from "@/assets/founder-bongi.jpg";
 
 import { CircularCarousel } from "@/components/CircularCarousel";
 
@@ -41,6 +41,7 @@ function Index() {
           <div className="hidden items-center gap-10 text-xs uppercase tracking-[0.3em] text-muted-foreground md:flex">
             <a href="#services" className="transition hover:text-gold">Services</a>
             <a href="#gallery" className="transition hover:text-gold">Gallery</a>
+            <Link to="/team" className="transition hover:text-gold">Team</Link>
             <a href="#founder" className="transition hover:text-gold">Founder</a>
             <a href="#book" className="transition hover:text-gold">Book</a>
           </div>
@@ -198,8 +199,8 @@ function Index() {
               <img src={founder} alt="The founder of ShugarLashPro" loading="lazy" width={800} height={1000} className="h-[600px] w-full object-cover" />
               <div className="absolute inset-x-0 bottom-0 p-6"
                    style={{ background: "linear-gradient(180deg, transparent, oklch(0.06 0 0 / 0.85))" }}>
-                <div className="text-[10px] uppercase tracking-[0.4em] text-gold">Founder</div>
-                <div className="font-display text-2xl text-foreground">The Famous Lash Professional</div>
+                <div className="text-[10px] uppercase tracking-[0.4em] text-gold">CEO & Founder</div>
+                <div className="font-display text-2xl text-foreground">Bongi — The Famous Lash Professional</div>
               </div>
             </div>
           </div>
@@ -213,6 +214,10 @@ function Index() {
             <p className="mt-8 text-base leading-relaxed text-muted-foreground">
               Shugarlashpro began in a quiet corner of Sandton with a single belief — that lashes should feel like couture: measured, considered, and made for one woman at a time. Today the studio is the trusted name behind Joburg's most photographed eyes, and the academy that trains the next generation of lash artists.
             </p>
+
+            <Link to="/team" className="mt-6 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.35em] text-gold hover:opacity-80">
+              Meet the team <span aria-hidden>→</span>
+            </Link>
 
             <div className="mt-12 grid grid-cols-3 gap-6 border-t border-[var(--gold)]/15 pt-8">
               {[
