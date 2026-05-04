@@ -1,37 +1,30 @@
-## Issue
-1. The animated logo video isn't visible — it's there, but `mix-blend-mode: screen` combined with the gold radial glow behind it is washing it out / making it invisible against the dark page on some renders. The mp4's background is already near-black, so blend mode is unnecessary.
-2. The top-left "SLP" text should be replaced with the actual gold lash logo image.
+## Goal
+Show the actual gold logo (translogo.png) in the header on every page. Currently `/pricing` and `/team` still display the "SLP" text instead of the logo.
 
-## Fix in `src/routes/index.tsx`
+## Changes
 
-**a) Top-left logo (nav)**
-Replace the SLP text span with an `<img>` using the existing `logo` import:
-```tsx
-<a href="#top" className="flex items-center gap-2">
-  <img src={logo} alt="Shugarlashpro" className="h-12 w-auto md:h-14" />
-</a>
-```
+### `src/routes/pricing.tsx`
+- Add import: `import logo from "@/assets/translogo.png";`
+- Replace the nav `<Link to="/">` brand block (lines ~72-74) with the same logo `<img>` markup used on the home page and comparison page:
+  ```tsx
+  <Link
+    to="/"
+    className="group inline-flex shrink-0 items-center bg-transparent p-0 shadow-none ring-0 outline-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold/35 sm:ml-0.5 sm:mt-0.5 md:ml-1 md:mt-1"
+  >
+    <img
+      src={logo}
+      alt="Shugarlashpro"
+      className="block h-12 w-auto bg-transparent opacity-[0.92] transition-[opacity,filter] duration-300 group-hover:opacity-100 group-hover:drop-shadow-[0_0_18px_rgba(218,165,75,0.18)] md:h-16 lg:h-[4.75rem]"
+    />
+  </Link>
+  ```
 
-**b) Hero animated video**
-- Remove `mixBlendMode: "screen"` (the mp4's black already matches the onyx page).
-- Keep the soft gold glow but reduce its blur opacity so it doesn't wash the logo out.
-- Ensure attributes for reliable autoplay everywhere: add `preload="auto"` and keep `autoPlay loop muted playsInline`.
-- Keep the gold drop-shadow filter for the "pop" effect.
+### `src/routes/team.tsx`
+- Same: add the `logo` import and replace the SLP text span with the identical `<img>` brand block.
 
-Resulting video block:
-```tsx
-<video
-  src="/logo-animated.mp4"
-  autoPlay
-  loop
-  muted
-  playsInline
-  preload="auto"
-  className="h-auto w-full"
-  style={{ filter: "drop-shadow(0 10px 40px oklch(0.82 0.13 85 / 0.35))" }}
-/>
-```
+### Verified already correct
+- `src/routes/index.tsx` — uses logo ✅
+- `src/routes/comparison.tsx` — uses logo ✅
 
 ## QA
-- Reload preview, confirm gold logo plays in the hero left column on a black background (seamless blend).
-- Confirm top-left nav now shows the gold lash logo instead of "SLP" text.
+Navigate to `/`, `/pricing`, `/team`, `/comparison` and confirm the gold lash logo renders consistently in the top-left of each header.
