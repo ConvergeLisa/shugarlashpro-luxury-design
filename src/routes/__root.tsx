@@ -1,6 +1,4 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
+import { Outlet, Link, createRootRoute, HeadContent } from "@tanstack/react-router";
 
 function NotFoundComponent() {
   return (
@@ -9,7 +7,7 @@ function NotFoundComponent() {
         <h1 className="text-7xl font-bold text-foreground">404</h1>
         <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          The page you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
         <div className="mt-6">
           <Link
@@ -39,35 +37,27 @@ export const Route = createRootRoute({
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "SHUGARLASHPRO — Luxury Lash Studio in Sandton" },
       { name: "twitter:description", content: "Premium lash extensions, brows & nails in Sandton. By The Famous Lash Professionals." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5d9e096e-fbde-4894-b36a-0db2c159cda9/id-preview-53684d1a--8c2ed0e8-ba49-488b-85e7-09f1cd9d5ec3.lovable.app-1777889477744.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5d9e096e-fbde-4894-b36a-0db2c159cda9/id-preview-53684d1a--8c2ed0e8-ba49-488b-85e7-09f1cd9d5ec3.lovable.app-1777889477744.png" },
-    ],
-    links: [
       {
-        rel: "stylesheet",
-        href: appCss,
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5d9e096e-fbde-4894-b36a-0db2c159cda9/id-preview-53684d1a--8c2ed0e8-ba49-488b-85e7-09f1cd9d5ec3.lovable.app-1777889477744.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5d9e096e-fbde-4894-b36a-0db2c159cda9/id-preview-53684d1a--8c2ed0e8-ba49-488b-85e7-09f1cd9d5ec3.lovable.app-1777889477744.png",
       },
     ],
   }),
-  shellComponent: RootShell,
-  component: RootComponent,
+  component: RootLayout,
   notFoundComponent: NotFoundComponent,
 });
 
-function RootShell({ children }: { children: React.ReactNode }) {
+function RootLayout() {
   return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
+    <>
+      <HeadContent />
+      <Outlet />
+    </>
   );
-}
-
-function RootComponent() {
-  return <Outlet />;
 }
