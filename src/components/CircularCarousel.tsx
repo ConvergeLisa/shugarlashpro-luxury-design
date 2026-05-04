@@ -43,7 +43,6 @@ export function CircularCarousel() {
 
   return (
     <div
-<<<<<<< HEAD
       className="relative w-full max-w-[100vw] overflow-x-hidden overflow-y-hidden py-8 md:py-12"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -60,24 +59,6 @@ export function CircularCarousel() {
             "h-[13.5rem] w-[13.5rem] sm:h-64 sm:w-64 md:h-96 md:w-96",
             "h-52 w-52 sm:h-56 sm:w-56 md:h-72 md:w-72 mt-6 sm:mt-10 md:mt-12",
             "h-56 w-56 sm:h-60 sm:w-60 md:h-80 md:w-80 -mt-3 sm:-mt-4 md:-mt-6",
-=======
-      className="relative w-full overflow-hidden py-12"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
-      {/* edge fades */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-32 md:w-64 bg-gradient-to-r from-background to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-32 md:w-64 bg-gradient-to-l from-background to-transparent" />
-      {/* radial gold glow */}
-      <div className="pointer-events-none absolute inset-0 -z-0" style={{ background: "var(--gradient-radial-gold)" }} />
-
-      <div ref={trackRef} className="flex gap-6 md:gap-10 will-change-transform">
-        {items.map((item, i) => {
-          const sizes = [
-            "h-72 w-72 md:h-96 md:w-96",
-            "h-56 w-56 md:h-72 md:w-72 mt-12",
-            "h-64 w-64 md:h-80 md:w-80 -mt-6",
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
           ];
           const sizeClass = sizes[i % 3];
           return (

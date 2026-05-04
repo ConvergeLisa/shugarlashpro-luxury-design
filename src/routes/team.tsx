@@ -1,11 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import bongi from "@/assets/founder-bongi.jpg";
-<<<<<<< HEAD
 import { MobileBookingBar } from "@/components/MobileBookingBar";
 import { SocialNavLinks } from "@/components/SocialNavLinks";
 import { BOOK_URL, WHATSAPP } from "@/constants/site-links";
-=======
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
 
 export const Route = createFileRoute("/team")({
   component: TeamPage,
@@ -19,7 +16,6 @@ export const Route = createFileRoute("/team")({
   }),
 });
 
-<<<<<<< HEAD
 function TeamPage() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-background pb-[calc(5.25rem+env(safe-area-inset-bottom,0px))] text-foreground lg:pb-0">
@@ -30,28 +26,12 @@ function TeamPage() {
             <span className="font-display text-xl tracking-[0.4em] gold-foil">SLP</span>
           </Link>
           <div className="hidden flex-1 items-center justify-center gap-8 text-xs uppercase tracking-[0.3em] text-muted-foreground md:flex lg:gap-10">
-=======
-const BOOK_URL = "https://www.fresha.com/en-GB/providers/shugarlashpro-the-famous-lash-professionals-y53wnwjy?share=true&pId=2578697&routeCtx=en-GB&dppub=true&menu=true";
-const WHATSAPP = "https://wa.me/27670615423?text=Hi%20Bongi%2C%20I%27d%20like%20to%20book%20a%20lash%20appointment.";
-
-function TeamPage() {
-  return (
-    <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
-      {/* NAV */}
-      <header className="absolute inset-x-0 top-0 z-50">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-          <Link to="/" className="flex items-center gap-2">
-            <span className="font-display text-xl tracking-[0.4em] gold-foil">SLP</span>
-          </Link>
-          <div className="hidden items-center gap-10 text-xs uppercase tracking-[0.3em] text-muted-foreground md:flex">
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
             <Link to="/" className="transition hover:text-gold">Home</Link>
             <Link to="/" hash="services" className="transition hover:text-gold">Services</Link>
             <Link to="/" hash="gallery" className="transition hover:text-gold">Gallery</Link>
             <Link to="/team" className="text-gold transition">Team</Link>
             <Link to="/pricing" className="transition hover:text-gold">Pricelist</Link>
             <Link to="/" hash="book" className="transition hover:text-gold">Book</Link>
-<<<<<<< HEAD
             <Link to="/comparison" className="transition hover:text-gold">Before / After</Link>
           </div>
           <div className="flex items-center gap-1 sm:gap-2">
@@ -61,13 +41,6 @@ function TeamPage() {
               Book Now
             </a>
           </div>
-=======
-          </div>
-          <a href={BOOK_URL} target="_blank" rel="noreferrer"
-             className="hidden rounded-full border border-[var(--gold)]/40 bg-background/40 px-5 py-2 text-[11px] uppercase tracking-[0.3em] text-gold backdrop-blur transition hover:bg-gold hover:text-primary-foreground md:inline-block">
-            Book Now
-          </a>
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
         </nav>
       </header>
 
@@ -77,11 +50,7 @@ function TeamPage() {
           <div className="absolute -top-20 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full opacity-40 blur-3xl"
                style={{ background: "radial-gradient(circle, oklch(0.82 0.13 85 / 0.3), transparent 60%)" }} />
         </div>
-<<<<<<< HEAD
         <div className="mx-auto max-w-5xl px-4 text-center animate-fade-up sm:px-6">
-=======
-        <div className="mx-auto max-w-5xl px-6 text-center animate-fade-up">
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
           <div className="mb-6 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-gold">
             <span className="h-px w-10 bg-gold" /> The House <span className="h-px w-10 bg-gold" />
           </div>
@@ -99,11 +68,7 @@ function TeamPage() {
       </section>
 
       {/* FOUNDER CARD */}
-<<<<<<< HEAD
       <section className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-=======
-      <section className="relative mx-auto max-w-6xl px-6 py-20">
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[auto_1fr]">
           {/* Portrait */}
           <div className="relative mx-auto animate-fade-up">
@@ -174,11 +139,7 @@ function TeamPage() {
       </section>
 
       {/* THE BRIGADE */}
-<<<<<<< HEAD
       <section className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24">
-=======
-      <section className="relative mx-auto max-w-6xl px-6 py-24">
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
         <div className="mb-14 text-center">
           <div className="mb-4 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-gold">
             <span className="h-px w-10 bg-gold" /> The Brigade <span className="h-px w-10 bg-gold" />
@@ -204,7 +165,6 @@ function TeamPage() {
       </section>
 
       {/* CTA */}
-<<<<<<< HEAD
       <section className="relative overflow-x-hidden py-20 md:py-28">
         <div className="absolute inset-0 -z-10 opacity-50"
              style={{ background: "radial-gradient(ellipse at center, oklch(0.82 0.13 85 / 0.2), transparent 60%)" }} />
@@ -229,30 +189,10 @@ function TeamPage() {
           <div className="mt-6 flex justify-center sm:mt-8">
             <SocialNavLinks variant="inline" />
           </div>
-=======
-      <section className="relative overflow-hidden py-28">
-        <div className="absolute inset-0 -z-10 opacity-50"
-             style={{ background: "radial-gradient(ellipse at center, oklch(0.82 0.13 85 / 0.2), transparent 60%)" }} />
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="font-display text-5xl leading-[0.95] md:text-7xl">
-            Sit in the <span className="italic gold-foil">founder's</span> chair.
-          </h2>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a href={BOOK_URL} target="_blank" rel="noreferrer"
-               className="inline-flex items-center justify-center rounded-full px-10 py-5 text-xs uppercase tracking-[0.35em] text-primary-foreground"
-               style={{ background: "var(--gradient-gold)", boxShadow: "var(--shadow-gold)" }}>
-              Book Online →
-            </a>
-            <Link to="/" className="inline-flex items-center justify-center rounded-full border border-[var(--gold)]/40 px-10 py-5 text-xs uppercase tracking-[0.35em] text-gold hover:bg-gold/10">
-              ← Back home
-            </Link>
-          </div>
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
         </div>
       </section>
 
       {/* FOOTER */}
-<<<<<<< HEAD
       <footer className="border-t border-[var(--gold)]/15 py-10 md:py-12">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 text-center sm:px-6 lg:flex-row lg:items-start lg:justify-between lg:text-left">
           <div className="font-display text-lg tracking-[0.4em] gold-foil">SHUGARLASHPRO</div>
@@ -269,38 +209,11 @@ function TeamPage() {
             <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
               © {new Date().getFullYear()} The Famous Lash Professionals
             </div>
-=======
-      <footer className="border-t border-[var(--gold)]/15 py-12">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
-          <div className="font-display text-lg tracking-[0.4em] gold-foil">SHUGARLASHPRO</div>
-          <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            Sandton · Morningside · Johannesburg
-          </div>
-          <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            © {new Date().getFullYear()} The Famous Lash Professionals
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
           </div>
         </div>
       </footer>
 
-<<<<<<< HEAD
       <MobileBookingBar />
-=======
-      {/* MOBILE STICKY CTA */}
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--gold)]/20 bg-background/90 p-3 backdrop-blur md:hidden">
-        <div className="flex gap-2">
-          <a href={BOOK_URL} target="_blank" rel="noreferrer"
-             className="flex-1 rounded-full py-3 text-center text-[11px] uppercase tracking-[0.3em] text-primary-foreground"
-             style={{ background: "var(--gradient-gold)" }}>
-            Book Now
-          </a>
-          <a href={WHATSAPP} target="_blank" rel="noreferrer"
-             className="flex-1 rounded-full border border-[var(--gold)]/40 py-3 text-center text-[11px] uppercase tracking-[0.3em] text-gold">
-            WhatsApp
-          </a>
-        </div>
-      </div>
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
     </div>
   );
 }

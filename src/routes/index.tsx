@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-<<<<<<< HEAD
 import logo from "@/assets/translogo.png";
 import founder from "@/assets/founder-bongi.jpg";
 import logoAnimation from "@/assets/logoanimation.gif";
@@ -8,12 +7,6 @@ import { CircularCarousel } from "@/components/CircularCarousel";
 import { MobileBookingBar } from "@/components/MobileBookingBar";
 import { SocialNavLinks } from "@/components/SocialNavLinks";
 import { BOOK_URL, WHATSAPP, PHONE } from "@/constants/site-links";
-=======
-import logo from "@/assets/logo-gold.png";
-import founder from "@/assets/founder-bongi.jpg";
-
-import { CircularCarousel } from "@/components/CircularCarousel";
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -27,13 +20,6 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-<<<<<<< HEAD
-=======
-const BOOK_URL = "https://www.fresha.com/en-GB/providers/shugarlashpro-the-famous-lash-professionals-y53wnwjy?share=true&pId=2578697&routeCtx=en-GB&dppub=true&menu=true";
-const WHATSAPP = "https://wa.me/27670615423?text=Hi%20Shugarlashpro%2C%20I%27d%20like%20to%20book%20a%20lash%20appointment.";
-const PHONE = "+27670615423";
-
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
 const services = [
   { name: "Classic Lashes", desc: "One-on-one application for a refined, natural finish." },
   { name: "YY Lashes", desc: "Pre-fanned styles for soft density and effortless wear." },
@@ -45,7 +31,6 @@ const services = [
 
 function Index() {
   return (
-<<<<<<< HEAD
     <div className="relative min-h-screen overflow-x-hidden bg-background pb-[calc(5.25rem+env(safe-area-inset-bottom,0px))] text-foreground lg:pb-0">
       {/* NAV */}
       <header className="absolute inset-x-0 top-0 z-50">
@@ -61,21 +46,10 @@ function Index() {
             />
           </a>
           <div className="hidden flex-1 items-center justify-center gap-5 text-xs uppercase tracking-[0.3em] text-muted-foreground md:flex lg:gap-8">
-=======
-    <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
-      {/* NAV */}
-      <header className="absolute inset-x-0 top-0 z-50">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-          <a href="#top" className="flex items-center gap-2">
-            <img src={logo} alt="Shugarlashpro" className="h-12 w-auto md:h-14" />
-          </a>
-          <div className="hidden items-center gap-10 text-xs uppercase tracking-[0.3em] text-muted-foreground md:flex">
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
             <a href="#services" className="transition hover:text-gold">Services</a>
             <Link to="/pricing" className="transition hover:text-gold">Pricelist</Link>
             <a href="#gallery" className="transition hover:text-gold">Gallery</a>
             <Link to="/team" className="transition hover:text-gold">Team</Link>
-<<<<<<< HEAD
             <Link to="/comparison" className="transition hover:text-gold">Before / After</Link>
             <a href="#book" className="transition hover:text-gold">Book</a>
           </div>
@@ -109,57 +83,12 @@ function Index() {
               Sandton · Est. The Famous Lash Professionals
             </div>
             <h1 className="font-display text-[clamp(1.65rem,6.5vw,2.5rem)] leading-[0.98] tracking-tight text-foreground md:text-[3.7rem] lg:text-[4.5rem]">
-=======
-            <a href="#book" className="transition hover:text-gold">Book</a>
-          </div>
-          <a href={BOOK_URL} target="_blank" rel="noreferrer"
-             className="hidden rounded-full border border-[var(--gold)]/40 bg-background/40 px-5 py-2 text-[11px] uppercase tracking-[0.3em] text-gold backdrop-blur transition hover:bg-gold hover:text-primary-foreground md:inline-block">
-            Book Now
-          </a>
-        </nav>
-      </header>
-
-      {/* HERO */}
-      <section id="top" className="relative min-h-screen">
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute -top-40 left-1/2 h-[700px] w-[700px] -translate-x-1/2 rounded-full opacity-40 blur-3xl"
-               style={{ background: "radial-gradient(circle, oklch(0.82 0.13 85 / 0.35), transparent 60%)" }} />
-        </div>
-
-        <div className="mx-auto grid min-h-screen max-w-7xl grid-cols-1 items-center gap-16 px-6 pt-32 pb-20 lg:grid-cols-2 lg:pt-24">
-          {/* Left: Animated logo video (full, uncropped) */}
-          <div className="relative order-2 flex items-center justify-center lg:order-1 animate-fade-up">
-            <div className="relative w-full max-w-[640px]">
-              <div className="pointer-events-none absolute inset-0 -z-10 blur-3xl animate-glow-pulse"
-                   style={{ background: "radial-gradient(circle, oklch(0.82 0.13 85 / 0.45), transparent 70%)" }} />
-              <video
-                src="/logo-animated.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-                className="h-auto w-full"
-                style={{ filter: "drop-shadow(0 10px 40px oklch(0.82 0.13 85 / 0.35))" }}
-              />
-            </div>
-          </div>
-
-          {/* Right: copy + CTAs */}
-          <div className="order-1 lg:order-2 animate-fade-up" style={{ animationDelay: "120ms" }}>
-            <div className="mb-6 flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-gold">
-              <span className="h-px w-10 bg-gold" />
-              Sandton · Est. The Famous Lash Professionals
-            </div>
-            <h1 className="font-display text-5xl leading-[0.95] tracking-tight text-foreground md:text-7xl lg:text-[5.5rem]">
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
               Luxury lashes,
               <br />
               <span className="italic gold-foil">tailored</span> to your face
               <br />
               <span className="text-muted-foreground">and your vibe.</span>
             </h1>
-<<<<<<< HEAD
             <p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground sm:mt-6">
               A private studio for the woman who treats her beauty as an heirloom. Hand-crafted lash sets, precision brows and discreet luxury — by appointment only.
             </p>
@@ -173,30 +102,11 @@ function Index() {
               </a>
               <a href={WHATSAPP} target="_blank" rel="noreferrer"
                  className="flex min-h-[48px] flex-1 items-center justify-center rounded-full border border-[var(--gold)]/40 px-6 py-3.5 text-xs font-medium uppercase tracking-[0.32em] text-gold transition hover:bg-gold/10 touch-manipulation sm:px-8 sm:py-4 sm:tracking-[0.35em]">
-=======
-            <p className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground">
-              A private studio for the woman who treats her beauty as an heirloom. Hand-crafted lash sets, precision brows and discreet luxury — by appointment only.
-            </p>
-
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a href={BOOK_URL} target="_blank" rel="noreferrer"
-                 className="group relative inline-flex items-center justify-center overflow-hidden rounded-full px-8 py-4 text-xs font-medium uppercase tracking-[0.35em] text-primary-foreground transition"
-                 style={{ background: "var(--gradient-gold)", boxShadow: "var(--shadow-gold)" }}>
-                <span className="relative z-10">Book Online</span>
-                <span className="ml-3 transition-transform group-hover:translate-x-1">→</span>
-              </a>
-              <a href={WHATSAPP} target="_blank" rel="noreferrer"
-                 className="inline-flex items-center justify-center rounded-full border border-[var(--gold)]/40 px-8 py-4 text-xs font-medium uppercase tracking-[0.35em] text-gold transition hover:bg-gold/10">
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
                 WhatsApp
               </a>
             </div>
 
-<<<<<<< HEAD
             <div className="mt-10 grid grid-cols-3 gap-6 border-t border-[var(--gold)]/15 pt-8">
-=======
-            <div className="mt-12 grid grid-cols-3 gap-6 border-t border-[var(--gold)]/15 pt-8">
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
               {[
                 ["12+", "Years of craft"],
                 ["6k+", "Lashed clients"],
@@ -213,11 +123,7 @@ function Index() {
       </section>
 
       {/* MARQUEE */}
-<<<<<<< HEAD
       <div className="relative overflow-x-hidden border-y border-[var(--gold)]/15 py-6">
-=======
-      <div className="relative overflow-hidden border-y border-[var(--gold)]/15 py-6">
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
         <div className="flex animate-spin-slow whitespace-nowrap" style={{ animation: "shimmer 30s linear infinite", backgroundSize: "auto" }}>
           <div className="flex shrink-0 items-center gap-12 px-6 font-display text-2xl italic text-muted-foreground">
             {Array.from({ length: 8 }).map((_, i) => (
@@ -234,7 +140,6 @@ function Index() {
       </div>
 
       {/* SERVICES */}
-<<<<<<< HEAD
       <section id="services" className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-32">
         <div className="relative mx-auto max-w-3xl">
           <div className="mb-[56px] max-w-[760px] text-left">
@@ -248,33 +153,11 @@ function Index() {
               Every set is consulted, mapped and built to your face shape — never one-size-fits-all.
             </p>
           </div>
-=======
-      <section id="services" className="relative mx-auto max-w-7xl px-6 py-32">
-        <div className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <div>
-            <div className="mb-4 flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-gold">
-              <span className="h-px w-10 bg-gold" /> The Menu
-            </div>
-            <h2 className="font-display text-5xl leading-none md:text-6xl">
-              Quiet luxury, <span className="italic gold-foil">measurable</span> craft.
-            </h2>
-          </div>
-          <p className="max-w-sm text-sm text-muted-foreground">
-            Every set is consulted, mapped and built to your face shape — never one-size-fits-all.
-          </p>
-        </div>
-
-        <div className="relative mx-auto max-w-3xl">
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
           <div className="pointer-events-none absolute -inset-x-10 -inset-y-6 -z-10 rounded-3xl opacity-40 blur-3xl"
                style={{ background: "radial-gradient(ellipse at center, oklch(0.82 0.13 85 / 0.25), transparent 70%)" }} />
           <ul className="divide-y divide-[var(--gold)]/15 border-y border-[var(--gold)]/20">
             {services.map((s, i) => (
-<<<<<<< HEAD
               <li key={s.name} className="group flex flex-col gap-2 py-6 transition sm:flex-row sm:items-baseline sm:gap-6 sm:py-7">
-=======
-              <li key={s.name} className="group flex items-baseline gap-6 py-7 transition">
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
                 <span className="w-10 shrink-0 font-display text-xs tracking-[0.3em] text-gold">
                   0{i + 1}
                 </span>
@@ -305,13 +188,8 @@ function Index() {
       </section>
 
       {/* GALLERY */}
-<<<<<<< HEAD
       <section id="gallery" className="relative overflow-x-hidden py-16 md:py-24">
         <div className="mx-auto mb-6 max-w-7xl px-4 text-center sm:mb-8 sm:px-6">
-=======
-      <section id="gallery" className="relative py-24">
-        <div className="mx-auto mb-8 max-w-7xl px-6 text-center">
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
           <div className="mb-4 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-gold">
             <span className="h-px w-10 bg-gold" /> The Portfolio <span className="h-px w-10 bg-gold" />
           </div>
@@ -323,21 +201,13 @@ function Index() {
       </section>
 
       {/* FOUNDER */}
-<<<<<<< HEAD
       <section id="founder" className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 md:py-32">
-=======
-      <section id="founder" className="relative mx-auto max-w-7xl px-6 py-32">
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           <div className="relative">
             <div className="absolute -inset-6 rounded-3xl opacity-40 blur-3xl"
                  style={{ background: "radial-gradient(circle, oklch(0.82 0.13 85 / 0.3), transparent 70%)" }} />
             <div className="relative overflow-hidden rounded-3xl border border-[var(--gold)]/30 ring-gold">
-<<<<<<< HEAD
               <img src={founder} alt="The founder of ShugarLashPro" loading="lazy" width={800} height={1000} className="h-[min(420px,65vh)] w-full object-cover sm:h-[min(520px,70vh)] md:h-[600px]" />
-=======
-              <img src={founder} alt="The founder of ShugarLashPro" loading="lazy" width={800} height={1000} className="h-[600px] w-full object-cover" />
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
               <div className="absolute inset-x-0 bottom-0 p-6"
                    style={{ background: "linear-gradient(180deg, transparent, oklch(0.06 0 0 / 0.85))" }}>
                 <div className="text-[10px] uppercase tracking-[0.4em] text-gold">CEO & Founder</div>
@@ -377,7 +247,6 @@ function Index() {
       </section>
 
       {/* BOOKING CTA */}
-<<<<<<< HEAD
       <section id="book" className="relative overflow-x-hidden py-20 md:py-32">
         <div className="absolute inset-0 -z-10 opacity-50"
              style={{ background: "radial-gradient(ellipse at center, oklch(0.82 0.13 85 / 0.2), transparent 60%)" }} />
@@ -395,30 +264,10 @@ function Index() {
           <div className="mx-auto mt-8 flex w-full max-w-md flex-col items-stretch justify-center gap-3 sm:mt-10 sm:flex-row sm:gap-4 md:max-w-none">
             <a href={BOOK_URL} target="_blank" rel="noreferrer"
                className="inline-flex min-h-[48px] flex-1 items-center justify-center rounded-full px-8 py-3.5 text-xs uppercase tracking-[0.32em] text-primary-foreground touch-manipulation sm:px-10 sm:py-5 sm:tracking-[0.35em]"
-=======
-      <section id="book" className="relative overflow-hidden py-32">
-        <div className="absolute inset-0 -z-10 opacity-50"
-             style={{ background: "radial-gradient(ellipse at center, oklch(0.82 0.13 85 / 0.2), transparent 60%)" }} />
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <div className="mb-6 inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-gold">
-            <span className="h-px w-10 bg-gold" /> By Appointment <span className="h-px w-10 bg-gold" />
-          </div>
-          <h2 className="font-display text-6xl leading-[0.95] md:text-8xl">
-            Reserve <span className="italic gold-foil">your</span>
-            <br /> chair.
-          </h2>
-          <p className="mx-auto mt-8 max-w-xl text-base text-muted-foreground">
-            New sets, refills and brow consultations — choose your time and we'll handle the rest.
-          </p>
-          <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a href={BOOK_URL} target="_blank" rel="noreferrer"
-               className="inline-flex items-center justify-center rounded-full px-10 py-5 text-xs uppercase tracking-[0.35em] text-primary-foreground"
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
                style={{ background: "var(--gradient-gold)", boxShadow: "var(--shadow-gold)" }}>
               Book Online →
             </a>
             <a href={WHATSAPP} target="_blank" rel="noreferrer"
-<<<<<<< HEAD
                className="inline-flex min-h-[48px] flex-1 items-center justify-center rounded-full border border-[var(--gold)]/40 px-8 py-3.5 text-xs uppercase tracking-[0.32em] text-gold touch-manipulation hover:bg-gold/10 sm:px-10 sm:py-5 sm:tracking-[0.35em]">
               WhatsApp Us
             </a>
@@ -427,20 +276,12 @@ function Index() {
             <SocialNavLinks variant="inline" />
           </div>
           <a href={`tel:${PHONE}`} className="mt-6 inline-block text-sm text-muted-foreground hover:text-gold md:mt-8">
-=======
-               className="inline-flex items-center justify-center rounded-full border border-[var(--gold)]/40 px-10 py-5 text-xs uppercase tracking-[0.35em] text-gold hover:bg-gold/10">
-              WhatsApp Us
-            </a>
-          </div>
-          <a href={`tel:${PHONE}`} className="mt-8 inline-block text-sm text-muted-foreground hover:text-gold">
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
             or call <span className="text-gold">+27 67 061 5423</span>
           </a>
         </div>
       </section>
 
       {/* FOOTER */}
-<<<<<<< HEAD
       <footer className="border-t border-[var(--gold)]/15 py-10 md:py-12">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 text-center sm:px-6 lg:flex-row lg:items-start lg:justify-between lg:text-left">
           <div className="font-display text-lg tracking-[0.4em] gold-foil">SHUGARLASHPRO</div>
@@ -457,38 +298,11 @@ function Index() {
             <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
               © {new Date().getFullYear()} The Famous Lash Professionals
             </div>
-=======
-      <footer className="border-t border-[var(--gold)]/15 py-12">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
-          <div className="font-display text-lg tracking-[0.4em] gold-foil">SHUGARLASHPRO</div>
-          <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            Sandton · Morningside · Johannesburg
-          </div>
-          <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-            © {new Date().getFullYear()} The Famous Lash Professionals
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
           </div>
         </div>
       </footer>
 
-<<<<<<< HEAD
       <MobileBookingBar />
-=======
-      {/* MOBILE STICKY CTA */}
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--gold)]/20 bg-background/90 p-3 backdrop-blur md:hidden">
-        <div className="flex gap-2">
-          <a href={BOOK_URL} target="_blank" rel="noreferrer"
-             className="flex-1 rounded-full py-3 text-center text-[11px] uppercase tracking-[0.3em] text-primary-foreground"
-             style={{ background: "var(--gradient-gold)" }}>
-            Book Now
-          </a>
-          <a href={WHATSAPP} target="_blank" rel="noreferrer"
-             className="flex-1 rounded-full border border-[var(--gold)]/40 py-3 text-center text-[11px] uppercase tracking-[0.3em] text-gold">
-            WhatsApp
-          </a>
-        </div>
-      </div>
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
     </div>
   );
 }

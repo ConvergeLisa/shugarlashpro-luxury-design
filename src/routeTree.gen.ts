@@ -11,10 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TeamRouteImport } from './routes/team'
 import { Route as PricingRouteImport } from './routes/pricing'
-<<<<<<< HEAD
 import { Route as ComparisonRouteImport } from './routes/comparison'
-=======
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
 import { Route as IndexRouteImport } from './routes/index'
 
 const TeamRoute = TeamRouteImport.update({
@@ -27,14 +24,11 @@ const PricingRoute = PricingRouteImport.update({
   path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
-<<<<<<< HEAD
 const ComparisonRoute = ComparisonRouteImport.update({
   id: '/comparison',
   path: '/comparison',
   getParentRoute: () => rootRouteImport,
 } as any)
-=======
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,53 +37,34 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-<<<<<<< HEAD
   '/comparison': typeof ComparisonRoute
-=======
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
   '/pricing': typeof PricingRoute
   '/team': typeof TeamRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-<<<<<<< HEAD
   '/comparison': typeof ComparisonRoute
-=======
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
   '/pricing': typeof PricingRoute
   '/team': typeof TeamRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-<<<<<<< HEAD
   '/comparison': typeof ComparisonRoute
-=======
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
   '/pricing': typeof PricingRoute
   '/team': typeof TeamRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-<<<<<<< HEAD
   fullPaths: '/' | '/comparison' | '/pricing' | '/team'
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/comparison' | '/pricing' | '/team'
   id: '__root__' | '/' | '/comparison' | '/pricing' | '/team'
-=======
-  fullPaths: '/' | '/pricing' | '/team'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/pricing' | '/team'
-  id: '__root__' | '/' | '/pricing' | '/team'
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-<<<<<<< HEAD
   ComparisonRoute: typeof ComparisonRoute
-=======
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
   PricingRoute: typeof PricingRoute
   TeamRoute: typeof TeamRoute
 }
@@ -110,7 +85,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
-<<<<<<< HEAD
     '/comparison': {
       id: '/comparison'
       path: '/comparison'
@@ -118,8 +92,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ComparisonRouteImport
       parentRoute: typeof rootRouteImport
     }
-=======
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
     '/': {
       id: '/'
       path: '/'
@@ -132,10 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-<<<<<<< HEAD
   ComparisonRoute: ComparisonRoute,
-=======
->>>>>>> 1f6ea5658c330de47a698a2a2072ce997954dccc
   PricingRoute: PricingRoute,
   TeamRoute: TeamRoute,
 }
