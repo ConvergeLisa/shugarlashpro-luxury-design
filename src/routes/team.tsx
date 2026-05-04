@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import logo from "@/assets/translogo.png";
 import bongi from "@/assets/founder-bongi.jpg";
 import { MobileBookingBar } from "@/components/MobileBookingBar";
 import { SocialNavLinks } from "@/components/SocialNavLinks";
@@ -22,8 +23,15 @@ function TeamPage() {
       {/* NAV */}
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-5 sm:px-6 sm:py-6">
-          <Link to="/" className="flex shrink-0 items-center gap-2">
-            <span className="font-display text-xl tracking-[0.4em] gold-foil">SLP</span>
+          <Link
+            to="/"
+            className="group inline-flex shrink-0 items-center bg-transparent p-0 shadow-none ring-0 outline-none focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gold/35 sm:ml-0.5 sm:mt-0.5 md:ml-1 md:mt-1"
+          >
+            <img
+              src={logo}
+              alt="Shugarlashpro"
+              className="block h-12 w-auto bg-transparent opacity-[0.92] transition-[opacity,filter] duration-300 group-hover:opacity-100 group-hover:drop-shadow-[0_0_18px_rgba(218,165,75,0.18)] md:h-16 lg:h-[4.75rem]"
+            />
           </Link>
           <div className="hidden flex-1 items-center justify-center gap-8 text-xs uppercase tracking-[0.3em] text-muted-foreground md:flex lg:gap-10">
             <Link to="/" className="transition hover:text-gold">Home</Link>
