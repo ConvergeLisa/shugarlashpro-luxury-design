@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import logo from "@/assets/translogo.png";
 import { MobileBookingBar } from "@/components/MobileBookingBar";
+import { MobileNavMenu } from "@/components/MobileNavMenu";
 import { SocialNavLinks } from "@/components/SocialNavLinks";
 import { BOOK_URL, WHATSAPP } from "@/constants/site-links";
 
@@ -92,6 +93,7 @@ function PricingPage() {
                className="hidden rounded-full border border-[var(--gold)]/40 bg-background/40 px-4 py-2 text-[11px] uppercase tracking-[0.3em] text-gold backdrop-blur transition hover:bg-gold hover:text-primary-foreground md:inline-block">
               Book Now
             </a>
+            <MobileNavMenu />
           </div>
         </nav>
       </header>
